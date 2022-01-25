@@ -1,0 +1,11 @@
+- hosts: oc
+  gather_facts: true
+  vars:
+   check_report_path: /tmp
+   check_mail_host: "smtp.qq.com"
+   check_mail_port: "465"
+   check_mail_username: "38867033@qq.com"
+   check_mail_password: "zzzknmtrxayibjbf"
+   check_mail_to: ["ilinux@88.com"] 
+  roles:
+   - os-check

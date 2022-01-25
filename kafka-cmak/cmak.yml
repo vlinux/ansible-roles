@@ -1,0 +1,11 @@
+- hosts: kafka
+  vars:
+   - kafka_cmak_port: 8080
+   - kafka_cmak_zk_hosts: 'localhost:2181'
+   - kafka_cmak_auth_enable: true
+   - kafka_cmak_auth_user: "admin"
+   - kafka_cmak_auth_pass: "admin"
+   - kafka_cmak_javahome: "/usr/lib/jvm/zulu-11-amd64"
+  roles:
+    - kafka-cmak
+

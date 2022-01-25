@@ -1,0 +1,10 @@
+---
+- hosts: kafka
+  vars:
+   - openjdk_packages: java-1.8.0-openjdk
+  roles:
+   - openjdk
+   - zookeeper
+   - { role: kafka, kafka_port: 9093, kafka_broker_id: 1 }
+   - { role: kafka, kafka_port: 9094, kafka_broker_id: 2 }
+   - { role: kafka, kafka_port: 9095, kafka_broker_id: 3 }
